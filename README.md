@@ -1,2 +1,2 @@
 # CFInvest
-Sistema de controle de finanças pessoais e investimentos
+Projeto sendo desenvolvido para fins de estudo das tecnologias do ecosistema Java.
