@@ -10,6 +10,11 @@
 	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
     <class>br.com.cfinvest.model.Movimentacao</class>
+    <class>br.com.cfinvest.model.MovimentacaoFii</class>
+    <class>br.com.cfinvest.model.Fii</class>
+    <class>br.com.cfinvest.model.Carteira</class>
+    <class>br.com.cfinvest.model.Cotacao</class>
+    <class>br.com.cfinvest.model.Usuario</class>
     
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>

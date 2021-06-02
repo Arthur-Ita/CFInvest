@@ -20,6 +20,8 @@ public class Movimentacao {
 	private String tipo;
 	@Temporal(TemporalType.DATE)
 	private Date data;
+	private String descricao;
+	
 	
 	public long getId() {
 		return id;
@@ -50,6 +52,12 @@ public class Movimentacao {
 	}
 	public void setData(Date data) {
 		this.data = data;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 	
 }
