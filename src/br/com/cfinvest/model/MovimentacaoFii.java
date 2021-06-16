@@ -3,8 +3,10 @@ package br.com.cfinvest.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="movimentacaoFii")
 public class MovimentacaoFii extends Movimentacao {
 
 	@Column
