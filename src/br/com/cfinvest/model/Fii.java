@@ -2,7 +2,6 @@ package br.com.cfinvest.model;
 
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +18,6 @@ public class Fii {
 	private long id;
 	private String codigo;
 	private String setor;
-	@Column
 	@OneToMany
 	private List<Cotacao> cotacao;
 	

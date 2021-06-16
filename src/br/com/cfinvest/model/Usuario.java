@@ -1,6 +1,5 @@
 package br.com.cfinvest.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +16,6 @@ public class Usuario {
 	private long id;
 	private String username;
 	private String password;
-	@Column
 	@OneToOne
 	private Carteira carteira;
 	

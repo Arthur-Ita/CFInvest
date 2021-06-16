@@ -1,6 +1,6 @@
 package br.com.cfinvest.model;
 
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -9,7 +9,6 @@ import javax.persistence.Table;
 @Table(name="movimentacaoFii")
 public class MovimentacaoFii extends Movimentacao {
 
-	@Column
 	@OneToOne
 	private Fii fii;
 	private int quantidade;

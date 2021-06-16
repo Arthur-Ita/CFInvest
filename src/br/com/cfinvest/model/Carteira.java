@@ -2,7 +2,6 @@ package br.com.cfinvest.model;
 
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,10 +16,8 @@ public class Carteira {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
-	@Column
 	@OneToMany()
 	private List<Fii> fundos;
-	@Column
 	@OneToMany
 	private List<MovimentacaoFii> operacoes;
 	
