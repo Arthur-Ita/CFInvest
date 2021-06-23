@@ -1,0 +1,17 @@
+.pagePanel{
+	display:inline;
+}
+.loginPanel{
+	text-align:center;
+	border:solid;
+	max-width:50%;
+	align-self: center;
+}
+
+.loginItem{
+	margin:0.8rem;
+}
+
+.loginLabel{
+	margin-right:0.3rem;
+}
