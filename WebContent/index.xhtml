@@ -16,21 +16,18 @@
 	</h:head>
 
 	<h:body>
-		<div class="pagePanel">
-		<div></div>
-			<h:form class="loginPanel p-formgrid p-grid">
-				<div class="loginItem p-field p-col-12 p-md-6">
-					<h:outputLabel class="loginLabel" for="login" value="Login:" />
-					<p:inputText id="login" required="true" />
-				</div>
-				<div class="loginItem p-field p-col-12 p-md-6">
-					<h:outputLabel class="loginLabel" for="passwd" value="Senha:" />
-					<p:inputText id="passwd" required="true" />
-				</div>
-				<p:commandButton value="Acessar" class="loginItem" />
-			</h:form>
-			<div></div>
-		</div>
+		<p:dialog visible="true" width="400" height="500" header="Acessar o Sistema" showHeader="false" modal="true" resizable="false">            
+            <h:panelGrid style="margin: 0 auto;"><h:outputText styleClass="fa fa-lock fa-5x"/></h:panelGrid>
+            <h:form id="formLogin">
+                <h:panelGrid cellspacing="10">
+                    Digite seu usuário e senha para ter acesso ao sistema:                    
+                    <p:messages id="messagesLogin"/>
+                    <p:inputText placeholder="Usuário" value="#{usuarioBean.login}" size="40" required="true" requiredMessage="Campo Login é obrigatório"/>
+                    <p:password placeholder="Senha" value="#{usuarioBean.senha}" size="40" required="true" requiredMessage="Campo Senha é obrigatório"/>
+                    <p:commandButton value="Acessar" action="#{loginBean.logIn()}" update="messagesLogin"/>
+                </h:panelGrid>
+            </h:form>
+        </p:dialog>
 	</h:body>
 
 </f:view>

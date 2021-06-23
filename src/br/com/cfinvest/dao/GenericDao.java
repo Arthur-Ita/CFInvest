@@ -9,8 +9,8 @@ import javax.persistence.Query;
 
 public class GenericDao<T>{
 
-	private EntityManagerFactory emf;
-	private EntityManager em;
+	protected EntityManagerFactory emf;
+	protected EntityManager em;
 
 
 	public void create(T obj) {
