@@ -19,7 +19,7 @@ public class UsuarioBean implements Serializable{
 	private Usuario usr;
 	private String login;
 	private String senha;
-	private UsuarioDao usrDao;
+	private UsuarioDao usrDao = new UsuarioDao();
 	
 	public Usuario getUsr() {
 		return usr;
@@ -47,7 +47,16 @@ public class UsuarioBean implements Serializable{
 	}
 	
 	public String logIn() {
-		return null;
+		usr = usrDao.buscarPorUsername(login);
+		if(usr == null) {
+			return "faces/erroLocalizaUsuario.jsf?faces-redirect=true";
+		}else {
+			if(usr.getPassword().equals(senha)) {
+				return "main?faces-redirect=true";
+			}else {
+				return "faces/erroLocalizaUsuario.jsf?faces-redirect=true";
+			}
+		}
 	}
 	
 }
