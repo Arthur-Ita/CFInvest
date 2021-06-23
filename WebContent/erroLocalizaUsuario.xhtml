@@ -16,12 +16,12 @@
 	</h:head>
 
 	<h:body>
-	<p:message>Usuario não encontrado!</p:message>
+	
 		<p:dialog visible="true" width="400" height="500" header="Acessar o Sistema" showHeader="false" modal="true" resizable="false">            
             <h:panelGrid style="margin: 0 auto;"><h:outputText styleClass="fa fa-lock fa-5x"/></h:panelGrid>
             <h:form id="formLogin">
                 <h:panelGrid cellspacing="10">
-                    Digite seu usuário e senha para ter acesso ao sistema:                    
+                    Usuario não encontrado!                    
                     <p:messages id="messagesLogin"/>
                     <p:inputText placeholder="Usuário" value="#{usuarioBean.login}" size="40" required="true" requiredMessage="Campo Login é obrigatório"/>
                     <p:password placeholder="Senha" value="#{usuarioBean.senha}" size="40" required="true" requiredMessage="Campo Senha é obrigatório"/>

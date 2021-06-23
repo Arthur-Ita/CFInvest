@@ -49,12 +49,12 @@ public class UsuarioBean implements Serializable{
 	public String logIn() {
 		usr = usrDao.buscarPorUsername(login);
 		if(usr == null) {
-			return "faces/erroLocalizaUsuario.jsf?faces-redirect=true";
+			return "erroLocalizaUsuario.jsf?faces-redirect=true";
 		}else {
 			if(usr.getPassword().equals(senha)) {
 				return "main?faces-redirect=true";
 			}else {
-				return "faces/erroLocalizaUsuario.jsf?faces-redirect=true";
+				return "erroLocalizaUsuario.jsf?faces-redirect=true";
 			}
 		}
 	}
